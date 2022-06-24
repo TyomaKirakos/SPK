@@ -1,0 +1,245 @@
+/* Подключение css-модулей */
+@import url('normalize.css');
+@import url('variables.css');
+
+/* -------Общие стили------- */
+.container{
+    width: 83%;
+    margin: 0 auto;
+}
+
+.heading{
+    color: var(--main-col);
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.just-text{
+    font-size: 16px;
+}
+
+/* Стили для таблиц */
+.table{
+    display: grid;
+    border: 1px solid var(--main-col);
+    overflow-x: scroll;
+    color: var(--main-col);
+    border-collapse: collapse;
+}
+
+.table::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+.table__head{
+    font-weight: 700;
+}
+
+.table__cell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-col);
+    line-height: 130%;
+    padding: 10px;
+    border: 1px solid var(--main-col);
+    text-align: center;
+    border-collapse: collapse;
+    transition: color 0.2s linear;
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    -ms-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+}
+
+a.table__cell:hover{
+    color: var(--sec-col)
+}
+
+/* -------Основные стили------- */
+/* Шапка */
+.header, .head-logo-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header{
+    padding: 35px 0;
+    margin-bottom: 35px;
+    column-gap: 20px;
+}
+
+.head-logo-block__head-logo{
+    width: 120px;
+    margin-right: 10px;
+}
+
+.head-logo-block__head-logo-text{
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--main-col);
+    line-height: 38px;
+}
+
+.head-contacts{
+    display: flex;
+    flex-direction: column;
+}
+
+.head-contacts__contact{
+    display: flex;
+    font-weight: 500;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    color: var(--main-col);
+    margin-bottom: 15px;
+    transition: color .2s linear;
+    -webkit-transition: color .2s linear;
+    -moz-transition: color .2s linear;
+    -ms-transition: color .2s linear;
+    -o-transition: color .2s linear;
+}
+
+.head-contacts__contact:last-child{
+    margin-bottom: 0;
+}
+
+.head-contacts__contact:hover{
+    color: var(--sec-col);
+}
+
+.head-contacts__contact:hover > img{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+
+.contact__icon{
+    width: 20px;
+    margin-right: 5px;
+    transition: transform .2s linear;
+    -webkit-transition: transform .2s linear;
+    -moz-transition: transform .2s linear;
+    -ms-transition: transform .2s linear;
+    -o-transition: transform .2s linear;
+}
+
+/* Блок с переключателем */
+.switch-block{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.switch-block::after{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: var(--main-col);
+}
+
+.switch-block__btn{
+    border: none;
+    padding: 10px 15px;
+    background-color: #5F5F5F;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.switch-block__btn:first-child{
+    border-radius: 10px 0px 0px 0px;
+    -webkit-border-radius: 10px 0px 0px 0px;
+    -moz-border-radius: 10px 0px 0px 0px;
+    -ms-border-radius: 10px 0px 0px 0px;
+    -o-border-radius: 10px 0px 0px 0px;
+}
+
+.switch-block__btn:last-child{
+    border-radius: 0px 10px 0px 0px;
+}
+
+.switch-block__btn:hover{
+    text-decoration: underline;
+}
+
+.switch-block__btn_active{
+    background: linear-gradient(360deg, var(--main-col) 0%, var(--sec-col) 100%);
+}
+
+/* -----------Основная часть----------- */
+/* -----Блок доп. образования----- */
+.pro-education-block, .training-courses-block{
+    margin-bottom: 80px;
+}
+
+/* Таблица профессионального обучения */
+.pro-education-block__table{
+    grid-template-columns: 1fr 1fr 1fr 0.4fr 0.4fr 0.4fr;
+}
+
+/* Таблица повышения квалификации */
+.training-courses-block__table{
+    grid-template-columns: 1fr 1fr 0.4fr 0.4fr 1fr;
+}
+
+/* Шаги поступления */
+.step{
+    width: 100%;
+    background: linear-gradient(90deg, #1F5A5E 0%, #217A80 100%);
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    justify-content: space-between;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.step:last-child{
+    margin-bottom: 0;
+}
+
+.step__step-text{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.step-text__number{
+    padding-right: 25px;
+    border-right: 3px solid #1A4B4F;
+    font-weight: 900;
+    font-size: 64px;
+    margin-right: 25px;
+    position: relative;
+}
+
+.step-text__name{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.step__img{
+    width: 85px;
+}
+
