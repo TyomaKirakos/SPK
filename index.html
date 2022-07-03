@@ -8,7 +8,7 @@
     <title>Доп.Образование СПК</title>
     <link rel="icon" href="img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" type="module" defer></script>
+    <script src="js/modals.js" defer></script>
     <script src="js/validating.js" defer></script>
 </head>
 
@@ -337,7 +337,7 @@
                     <h3 class="top-cntrls__heading heading">Заявка на поступление</h3>
                     <button class="top-cntrls__close-btn">X</button>
                 </div>
-                <form action="send.php" class="modal__form form" method="POST">
+                <form action="php/send.php" class="modal__form form" method="POST">
                     <div class="form__input-block just-text">
                         <label for="fio" class="input-block__label">ФИО</label>
                         <input type="text" required title="ФИО должно быть на русском языке (минимум 5 символов)" minlength="5" pattern="^[А-Яа-яЁё\s]+$" name="fio" class="input-block__input input-block__fio-input" placeholder="Иванов Иван Иванович">
