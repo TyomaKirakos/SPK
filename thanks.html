@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доп.Образование СПК</title>
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <!-- Блок с логотипом -->
+            <div class="header__head-logo-block head-logo-block">
+                <!-- Сам логотип -->
+                <a href="https://spkmo.ru/" class="head-logo-block__head-logo">
+                    <img src="img/logo.svg" alt="СПК" class="head-logo__img">
+                </a>
+                <h1 class="head-logo-block__head-logo-text">ГБПОУ МО “Сергиево-Посадский колледж”</h1>
+            </div>
+            <!-- Блок контактов -->
+            <div class="header__head-contacts head-contacts">
+                <!-- Телефон -->
+                <a href="tel:84965413941" class="head-contacts__contact contacts__contact just-text">
+                    <img src="img/phone.svg" alt="Phone" class="contact__icon">8(496)54-1-39-41
+                </a>
+                <!-- Адрес -->
+                <a href="https://yandex.ru/maps/10752/sergiev-posad/house/ulitsa_40_let_oktyabrya_5a/Z0EYdwJnSUIDQFtsfX9zc3RibQ==/?ll=38.157074%2C56.322819&z=16.49"
+                    class="head-contacts__contact contacts__contact just-text">
+                    <img src="img/address.svg" alt="Phone" class="contact__icon">Московская обл., г. Сергиев Посад, ул.
+                    40 лет Октября, д. 5а
+                </a>
+                <!-- Почта -->
+                <a href="mailto:plat@spkmo.ru" class="head-contacts__contact contacts__contact just-text">
+                    <img src="img/email.svg" alt="Phone" class="contact__icon">plat@spkmo.ru
+                </a>
+
+            </div>
+        </header>
+        <!-- Блок с переключателем -->
+        <div class="switch-block">
+            <a href="index.html" class="switch-block__btn just-text add-education-btn switch-block__btn_active">Доп.
+                образование</a>
+            <a href="driving-school.html" class="switch-block__btn just-text driving-school-btn">Автошкола</a>
+        </div>
+
+        <main class="thanksgiving-block">
+            <h2 class="thanksgiving-block__heading heading">Спасибо за вашу заявку!</h2>
+            <p class="thanksgiving-block__subtitle">Скоро мы с вами свяжемся!</p>
+            <a href="index.html" class="thanksgiving-block__link just-text">Вернуться на главную</a>
+        </main>
+    </div>
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer__content container">
+            <!-- Блок с логотипом -->
+            <div class="footer__foot-logo-block foot-logo-block">
+                <!-- Сам логотип -->
+                <a href="https://spkmo.ru/" class="foot-logo-block__foot-logo">
+                    <img src="img/logo.svg" alt="СПК" class="foot-logo__img">
+                </a>
+                <h1 class="foot-logo-block__foot-logo-text">ГБПОУ МО “Сергиево-Посадский колледж”</h1>
+            </div>
+            <!-- Блок контактов -->
+            <div class="footer__foot-contacts foot-contacts">
+                <!-- Телефон -->
+                <a href="tel:84965413941" class="foot-contacts__contact contacts__contact just-text">
+                    <img src="img/foot-phone.svg" alt="Phone" class="contact__icon">8(496)54-1-39-41
+                </a>
+                <!-- Адрес -->
+                <a href="https://yandex.ru/maps/10752/sergiev-posad/house/ulitsa_40_let_oktyabrya_5a/Z0EYdwJnSUIDQFtsfX9zc3RibQ==/?ll=38.157074%2C56.322819&z=16.49"
+                    class="foot-contacts__contact contacts__contact just-text">
+                    <img src="img/foot-address.svg" alt="Phone" class="contact__icon">Московская обл., г. Сергиев Посад,
+                    ул. 40 лет Октября, д. 5а
+                </a>
+                <!-- Почта -->
+                <a href="mailto:plat@spkmo.ru" class="foot-contacts__contact contacts__contact just-text">
+                    <img src="img/foot-email.svg" alt="Phone" class="contact__icon">plat@spkmo.ru
+                </a>
+
+            </div>
+            <p class="footer__copyright just-text">© 2022 - Государственное бюджетное профессиональное образовательное
+                учреждение Московской области "Сергиево-Посадский колледж"</p>
+        </div>
+    </footer>
+    <!-- Модальное окно (изначально скрыто) -->
+    <div class="modal-bg">
+        <div class="modal">
+            <div class="modal__content">
+                <div class="modal__top-cntrls top-cntrls">
+                    <h3 class="top-cntrls__heading heading">Заявка на поступление</h3>
+                    <button class="top-cntrls__close-btn">X</button>
+                </div>
+                <form class="modal__form form">
+                    <div class="form__input-block just-text">
+                        <label for="fio" class="input-block__label">ФИО</label>
+                        <input type="text" name="fio" class="input-block__input" placeholder="Иванов Иван Иванович">
+                        <p class="input-block__warning-txt fio-warning-txt">ФИО введено некорректно</p>
+                    </div>
+                    <div class="form__input-block just-text">
+                        <label for="phone" class="input-block__label">Телефон</label>
+                        <input type="tel" name="phone" class="input-block__input" placeholder="+79998779344">
+                        <p class="input-block__warning-txt phone-warning-txt">Введён некорректный номер телефона</p>
+                    </div>
+                    <button type="submit" class="form__submit-btn just-text">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -4,6 +4,7 @@
 
 /* -------Общие стили------- */
 body{
+    /* width: 100vw; */
     overflow-x: hidden;
 }
 
@@ -149,6 +150,139 @@ body{
 .footer__copyright{
     font-weight: 200;
     line-height: 150%;
+}
+
+/* Модалки */
+
+.modal-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal{
+    width: 50%;
+    min-width: 340px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.top-cntrls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.top-cntrls__heading{
+    margin-bottom: 0;
+}
+
+.top-cntrls__close-btn{
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--main-col);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.2s linear;
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    -ms-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+}
+
+.top-cntrls__close-btn:hover{
+    color: var(--sec-col);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__input-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.form__input-block:last-child{
+    margin-bottom: 0;
+}
+
+.form__input-block > *:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.input-block__input{
+    font-size: 16px;
+    width: 250px;
+    padding: 5px 15px;
+    border: 3px solid var(--main-col);
+    outline: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: border 0.3s linear;
+    -webkit-transition: border 0.3s linear;
+    -moz-transition: border 0.3s linear;
+    -ms-transition: border 0.3s linear;
+    -o-transition: border 0.3s linear;
+}
+
+.input-block__input:focus{
+    border: 3px solid var(--sec-col);
+}
+
+.input-block__input::placeholder{
+    font-size: 16px;
+}
+
+.input-block__warning-txt{
+    opacity: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: red;
+}
+
+.form__submit-btn{
+    color: #fff;
+    padding: 15px 25px;
+    background: linear-gradient(180deg, var(--main-col) 0%, var(--sec-col) 100%);
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.modal-info__text{
+    text-align: center;
+}
+
+.modal-info__text > a{
+    color: var(--main-col);
+    text-decoration: none;
 }
 
 /* Блок с переключателем */
@@ -456,7 +590,7 @@ a.table__cell:hover{
 }
 
 /* ----------------------
-    Блок автошколы
+    Страница автошколы
 ---------------------- */
 
 /* Блок с информацией */
@@ -467,6 +601,31 @@ a.table__cell:hover{
 
 .drive-school-info__documents-list{
     margin-left: 20px;
+}
+
+/* ----------------------
+    Страница благодарности
+---------------------- */
+
+.thanksgiving-block{
+    text-align: center;
+    color: var(--main-col);
+    padding: 50px;
+}
+
+.thanksgiving-block__heading{
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.thanksgiving-block__subtitle{
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.thanksgiving-block__link{
+    color: var(--main-col);
 }
 
 /*
@@ -573,6 +732,11 @@ a.table__cell:hover{
 }
 
 @media (max-width: 550px) {
+
+    .modal{
+        padding: 15px;
+    }
+
     .step, .step__step-text{
         flex-direction: column;
         align-items: center;
@@ -593,4 +757,49 @@ a.table__cell:hover{
     .step__img{
         width: 75px;
     }
+
+    .request-block::before{
+        content: '';
+        position: absolute;
+        z-index: -5;
+        display: block;
+        width: 150px;
+        height: 150px;
+        bottom: 0;
+        left: 0;
+        transform: translate(-5%, 50%);
+        -webkit-transform: translate(-5%, 50%);
+        -moz-transform: translate(-5%, 50%);
+        -ms-transform: translate(-5%, 50%);
+        -o-transform: translate(-5%, 50%);
+        background: linear-gradient(0deg, var(--sec-col) 0%, #96F8FF 100%);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
+    
+    .request-block::after{
+        content: '';
+        position: absolute;
+        z-index: -5;
+        display: block;
+        width: 150px;
+        height: 150px;
+        top: 0;
+        right: 0;
+        transform: translate(5%, -50%);
+        -webkit-transform: translate(5%, -50%);
+        -moz-transform: translate(5%, -50%);
+        -ms-transform: translate(5%, -50%);
+        -o-transform: translate(5%, -50%);
+        background: linear-gradient(180deg, var(--sec-col) 0%, #96F8FF 100%);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
+
 }

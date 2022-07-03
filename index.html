@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Доп.Образование СПК</title>
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js" type="module" defer></script>
+    <script src="js/validating.js" defer></script>
 </head>
 
 <body>
@@ -49,6 +51,7 @@
 
         <main class="add-eductaion">
             <!-- Доп.образование -->
+            <!-- Таблица Набор напрофессиональное обучение -->
             <div class="add-education__pro-education-block pro-education-block">
                 <h3 class="pro-education-block__heading heading">Набор напрофессиональное обучение</h3>
                 <!-- Таблица -->
@@ -143,6 +146,7 @@
                 </div>
             </div>
 
+            <!-- Таблица Курсыповышения квалификации на базе СПО или ВПО -->
             <div class="add-education__training-courses-blocktraining-courses-block">
                 <h3 class="training-courses-block__heading heading">Курсыповышения квалификации на базе СПО или ВПО</h3>
                 <div class="training-courses-block__table table just-text">
@@ -187,6 +191,7 @@
                 </div>
             </div>
 
+            <!-- Блок с шагами поступления -->
             <div class="add-education__steps-block steps-block">
                 <h3 class="steps-block__heading heading">Как к нам поступить?</h3>
                 <div class="steps-block__steps steps">
@@ -234,6 +239,7 @@
                 </div>
             </div>
 
+            <!-- Блок с кнопкой, которая открывает форму -->
             <div class="add-education__request-block request-block">
                 <div class="add-education__education-request-part education-request-part request-part">
                     <div class="education-request-part__request-text-block request-text-block">
@@ -246,6 +252,7 @@
                 </div>
             </div>
 
+            <!-- Блок с контактами -->
             <div class="add-education__contacts-block contacts-block">
                 <h3 class="contacts-block__heading heading">Контакты</h3>
                 <div class="contacts-block__contact-block contact-block">
@@ -262,6 +269,7 @@
                 </script>
             </div>
 
+            <!-- Блок с документами -->
             <div class="add-education__documents-block documents-block">
                 <h3 class="documents-block__heading heading">Документы</h3>
                 <div class="documents-block__documents">
@@ -288,6 +296,7 @@
 
         </main>
     </div>
+    <!-- Подвал -->
     <footer class="footer">
         <div class="footer__content container">
             <!-- Блок с логотипом -->
@@ -320,6 +329,30 @@
                 учреждение Московской области "Сергиево-Посадский колледж"</p>
         </div>
     </footer>
+    <!-- Модальное окно (изначально скрыто) -->
+    <div class="modal-bg">
+        <div class="modal">
+            <div class="modal__content">
+                <div class="modal__top-cntrls top-cntrls">
+                    <h3 class="top-cntrls__heading heading">Заявка на поступление</h3>
+                    <button class="top-cntrls__close-btn">X</button>
+                </div>
+                <form action="send.php" class="modal__form form" method="POST">
+                    <div class="form__input-block just-text">
+                        <label for="fio" class="input-block__label">ФИО</label>
+                        <input type="text" required title="ФИО должно быть на русском языке (минимум 5 символов)" minlength="5" pattern="^[А-Яа-яЁё\s]+$" name="fio" class="input-block__input input-block__fio-input" placeholder="Иванов Иван Иванович">
+                        <p class="input-block__warning-txt fio-warning-txt">ФИО введено некорректно</p>
+                    </div>
+                    <div class="form__input-block just-text">
+                        <label for="phone" class="input-block__label">Телефон</label>
+                        <input type="tel" required title="Номер телефона должен начинаться с +7" minlength="10" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" name="phone" class="input-block__input input-block__phone-input" placeholder="+79998779344">
+                        <p class="input-block__warning-txt phone-warning-txt">Введён некорректный номер телефона</p>
+                    </div>
+                    <button type="submit" class="form__submit-btn just-text">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

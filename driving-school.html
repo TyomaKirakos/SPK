@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Доп.Образование СПК</title>
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js" type="module" defer></script>
 </head>
 <body>
     <div class="container">
@@ -43,6 +44,7 @@
         </div>
 
         <main class="driving-school">
+            <!-- Блок с осн. информацией -->
             <div class="driving-school__about-drive-school-block about-drive-school-block">
                 <h3 class="about-drive-school-block__heading heading">О нашей автошколе</h3>
                 <div class="about-drive-school-block__drive-school-info drive-school-info just-text">
@@ -64,6 +66,8 @@
 
                 </div>
             </div>
+
+            <!-- Блок с кнопкой открытия модального окна -->
             <div class="driving-school__request-block request-block">
                 <div class="driving-school__driving-school-request-part driving-school-request-part request-part">
                     <div class="driving-school-request-part__request-text-block request-text-block">
@@ -75,6 +79,8 @@
                     </button>
                 </div>
             </div>
+
+            <!-- Блок с документами -->
             <div class="add-education__documents-block documents-block">
                 <h3 class="documents-block__heading heading">Документы</h3>
                 <div class="documents-block__documents">
@@ -138,6 +144,7 @@
             </div>
         </main>
     </div>
+    <!-- Подвал -->
     <footer class="footer">
         <div class="footer__content container">
             <!-- Блок с логотипом -->
@@ -167,5 +174,19 @@
             <p class="footer__copyright just-text">© 2022 - Государственное бюджетное профессиональное образовательное учреждение Московской области "Сергиево-Посадский колледж"</p>
         </div>
     </footer>
+    <!-- Модальное окно (изначально скрыто) -->
+    <div class="modal-bg">
+        <div class="modal">
+            <div class="modal__content">
+                <div class="modal__top-cntrls top-cntrls">
+                    <h3 class="top-cntrls__heading heading">Заявка на поступление</h3>
+                    <button class="top-cntrls__close-btn">X</button>
+                </div>
+                <div class="modal__modal-info just-text">
+                    <p class="modal-info__text">Для записи в автошколу звоните по номеру <a href="tel:+79264333431" class="bold-text">+7 926 433-34-31</a> (Сергеева Ольга Владимировна)</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
