@@ -1,7 +1,7 @@
 const modalOpenBtn = document.querySelector('.request-btn');
 const modal = document.querySelector('.modal-bg');
 const modalCloseBtn = modal.querySelector('.top-cntrls__close-btn');
-const form = modal.querySelector('form');
+const modalForm = modal.querySelector('form');
 
 modalOpenBtn.addEventListener('click', openModal);
 modalCloseBtn.addEventListener('click', closeModal)
@@ -17,10 +17,10 @@ function openModal() {
 
 function closeModal() {
     modal.style.display = 'none';
-    if (form) {
-        let fioWarningTxt = form.querySelector('.fio-warning-txt');
-        let phoneWarningTxt = form.querySelector('.phone-warning-txt');
-        form.reset();
+    if (modalForm) {
+        let fioWarningTxt = modalForm.querySelector('.fio-warning-txt');
+        let phoneWarningTxt = modalForm.querySelector('.phone-warning-txt');
+        modalForm.reset();
         fioWarningTxt.style.opacity = '0';
         phoneWarningTxt.style.opacity = '0';
     }
